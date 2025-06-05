@@ -1,6 +1,12 @@
 name: PyStand
 
 on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: '发布版本标签 (例如: v1.0.0)'
+        required: false
+        type: string
   push:
   pull_request:
     types: [ opened, synchronize, reopened, ready_for_review ]
